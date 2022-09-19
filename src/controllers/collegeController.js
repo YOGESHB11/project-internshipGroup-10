@@ -47,7 +47,9 @@ const createCollege = async function (req, res) {
 //=============~~~~~~~~~~~~~~~~~~~~~~(getCollegeDetails)~~~~~~~~~~~~~~~~~~~~~~~~=================
 
 const getCollegeDetails = async function (req, res) {
+    
     try {
+        res.setHeader('Access-Control-Allow-Origin','*')
         let query = req.query;
         let collegeFilter = {};
         if (!validator.isValidBody(query)) {
